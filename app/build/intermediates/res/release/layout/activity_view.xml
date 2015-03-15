@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/c1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/viewtv"
+        android:layout_weight="0.83"
+        android:layout_above="@+id/backb"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="14dp"
+        android:background="@color/c2"
+        android:maxLines = "9999999"
+        android:scrollbars = "vertical"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/backb"
+        android:layout_weight="0.11"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="backoc"
+        android:layout_margin="12dp"
+        android:background="@color/c4" />
+</RelativeLayout><!-- From: file:/C:/Users/Tash-had/AndroidstudioProjects/NeureNote/app/src/main/res/layout/activity_view.xml -->

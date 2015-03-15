@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c3">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/newpasset"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/setpassb"
+        android:layout_alignStart="@+id/setpassb"
+        android:layout_marginTop="66dp"
+        android:layout_alignRight="@+id/setpassb"
+        android:layout_alignEnd="@+id/setpassb"
+        android:background="@color/c4"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/confirmet"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/newpasset"
+        android:layout_alignStart="@+id/newpasset"
+        android:layout_alignRight="@+id/newpasset"
+        android:layout_alignEnd="@+id/newpasset"
+        android:background="@color/c3"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/setpassb"
+        android:onClick="newpassoc"
+        android:layout_below="@+id/confirmet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c4"/>
+</RelativeLayout><!-- From: file:/C:/Users/Tash-had/AndroidstudioProjects/NeureNote/app/src/main/res/layout/activity_pin.xml -->

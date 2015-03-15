@@ -1,0 +1,6 @@
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\classes\release
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-c7793cedb86bedfdfd49774f834c572290efd619.jar
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-c00c957f489438c04b63f2ed277745fbd7a91ea4.jar
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\pre-dexed\release\libGoogleAnalyticsServices-27c56c510f487e5f0df006427fed714ca8dff591.jar
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\pre-dexed\release\classes-89959cfea1d7c101b838a1c3f44766f696319f60.jar
+C:\Users\Tash-had\AndroidstudioProjects\NeureNote\app\build\intermediates\pre-dexed\release\classes-b964e32e791301f0b3bb2297ca88b3850c8829c8.jar

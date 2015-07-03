@@ -113,8 +113,6 @@ public class MainActivity extends Activity {
         datetime = sdf.format(d);
 
         notenew = et1.getText().toString();
-        pin = et2.getText().toString();
-        pinv = ftsp.getString("password", "");
         newLine = System.getProperty("line.separator");
         current = ftsp.getString("data", "");
         note = datetime + newLine + notenew + newLine + newLine + current;
@@ -122,20 +120,20 @@ public class MainActivity extends Activity {
         nl = notenew.length();
 
         if(nl>1){
-            if(pin.equals(pinv)){
+            if(checKPass()){
                 spedit.putString("data", note);
                 spedit.apply();
-                Toast.makeText(this, "Note Saved" , Toast.LENGTH_SHORT).show();
+                toastFunction("Note Saved"); 
                 et1.setText("");
             }
 
             else{
-                Toast.makeText(this, "Invalid PIN. Try again.",Toast.LENGTH_SHORT).show();
+                toastFunction("Invalid PIN. Try again.");  
                 et2.setText("");
             }
         }
         else{
-        Toast.makeText(this, "Enter a new note first.", Toast.LENGTH_SHORT).show();
+            toastFunction("Enter a new note first."); 
         }
     }
 
@@ -145,13 +143,10 @@ public class MainActivity extends Activity {
         TextView tv2;
         InputMethodManager imm;
 
-
-        pin = et2.getText().toString();
-        pinv = ftsp.getString("password", "");
         note = ftsp.getString("data", "");
         imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
 
-        if(pin.equals(pinv)){
+        if(checKPass()){
             setContentView(R.layout.activity_view);
             tv2 = (TextView)findViewById(R.id.viewtv);
             imm.hideSoftInputFromWindow(tv2.getWindowToken(), 0);
@@ -165,7 +160,7 @@ public class MainActivity extends Activity {
             b4.setTypeface(tf);
         }
         else{
-            Toast.makeText(this, "Invalid PIN. Try again.", Toast.LENGTH_SHORT).show();
+            toastFunction("Invalid PIN. Try again.");  
             et2.setText("");
         }
     }
@@ -176,15 +171,12 @@ public class MainActivity extends Activity {
         Button b5;
         InputMethodManager imm;
 
-
-        pin = et2.getText().toString();
-        pinv = ftsp.getString("password", "");
         note = ftsp.getString("data", "");
         imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
 
 
 
-        if(pin.equals(pinv)){
+        if(checKPass()){
             setContentView(R.layout.activity_edit);
             et5 = (EditText)findViewById(R.id.edittext);
             imm.hideSoftInputFromWindow(et5.getWindowToken(), 0);
@@ -197,7 +189,7 @@ public class MainActivity extends Activity {
             b5.setTypeface(tf);
         }
         else{
-            Toast.makeText(this, "Invalid PIN. Try again.", Toast.LENGTH_SHORT).show();
+            toastFunction("Invalid PIN. Try again.");  
             et2.setText("");
         }
     }
@@ -211,7 +203,7 @@ public class MainActivity extends Activity {
 
         spedit.putString("data", note);
         spedit.apply();
-        Toast.makeText(this, "Note Updated." , Toast.LENGTH_SHORT).show();
+        toastFunction("Note Updated."); 
         Intent intent = getIntent();
         finish();
         startActivity(intent);
@@ -222,4 +214,18 @@ public class MainActivity extends Activity {
         finish();
         startActivity(intent);
     }
+
+    public boolean checKPass(){
+       pin = et2.getText().toString();
+       pinv = ftsp.getString("password", "");
+       if(checKPass()){
+            return true; 
+       }else{
+            return false;
+       }
+   }
+
+   private void toastFunction(String toastMessage){
+        Toast.makeText(this, toastMessage , Toast.LENGTH_SHORT).show();
+   }
 }
